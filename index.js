@@ -14,6 +14,10 @@ app.use('/api/user', authRouter);
 app.use('/api/note', noteRouter);
 
 
+app.get('/', (req, res) => {
+    res.send('Hello World! this is Happy Notes')
+  })
+
 dotenv.config();
 
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true});
